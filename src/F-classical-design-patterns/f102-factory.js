@@ -28,3 +28,14 @@ function carFactory (manufacturer, model, isVip = false) {
 	return makeCar;
 }
 
+// 3 samochody w tym jeden zrobiony dla VIPa i pokaż na konsoli
+const carAudi = carFactory('Audi', 'A8');
+const carAudi2 = carAudi;
+const carMercedes = carFactory('Mercedes', 'E202');
+console.log(carAudi)
+console.log(carMercedes)
+console.log(carFactory('Maybach', 'X', true))
+
+console.log(carAudi === carMercedes);
+console.log(carAudi === carAudi2);
+

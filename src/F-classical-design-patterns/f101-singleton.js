@@ -32,4 +32,18 @@ class IceTruckService {
 	getName() {
 		return this.name;
 	}
+
+	static getInstance() {
+		return IceTruckService.instance;
+	}
 }
+
+const iceTruck1 = new IceTruckService('Lodziarnia');
+const iceTruck2 = new IceTruckService('Lodziarnia na kółkach');
+
+// Lepsze podejscie:
+const iceTruck3 = IceTruckService.getInstance();
+
+console.log(iceTruck1 === iceTruck2)
+console.log(iceTruck1.getName())
+console.log(iceTruck2.getName())

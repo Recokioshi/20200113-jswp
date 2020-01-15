@@ -34,4 +34,21 @@ const api = {
   ]
 };
 
+const pluckBooks = (user) => user.books;
+//const pluckBooks2 = user => user.books;
+const pluckQuote = function(book) {
+  return book.quote;
+};
+
+function pluck(fieldName) {
+  return function (someObject) {
+    return someObject[fieldName];
+  };
+}
+
 // Rozwiązanie:
+const quotes = api.users.map(pluckBooks).flat().map(pluckQuote);
+const quotes2 = api.users.map(pluck('books')).flat().map(pluck('quote'));
+
+console.log(quotes);
+console.log(quotes2);

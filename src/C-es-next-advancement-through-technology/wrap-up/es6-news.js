@@ -58,16 +58,30 @@
   console.log('#3 ---- arrowFunctions() :');
     // Skrócony zapis:
     const myFunc = (x) => {
-      console.log(x);
+      return x;
     };
+    myFunc(20) //?
 
     // Jeszcze bardziej skrócony zapis:
-    const myFunc2 = (x) => console.log(x);
+    const myFunc2 = (x) => x;
+    myFunc2(10) //?
 
+    const myFuncWithObj = (name) => ({name: name})
+
+    myFuncWithObj('michal') //?
     // Tak też zadziała dla jednego argumentu:
     const oneArgFunc = name => `hello ${name}`;
     console.log(oneArgFunc('Helena'));
 
+
+    const name = 'Michał';
+    ////....
+
+    //.....
+    const user = {
+      name
+    }
+    console.log(user);
     // Niemienność kontekstu:
     // #! porównaj z przykładem: a1-samples/context-problem.standalone.js
 
@@ -178,7 +192,11 @@
   console.log(`
   
   My
-  multi-lined console.log is wearing an ${interpolate} !
+  multi-lined 
+  
+  😁   !
+  
+  console.log is wearing an ${interpolate} !
   
   `)
 }());

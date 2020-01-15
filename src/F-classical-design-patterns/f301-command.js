@@ -38,6 +38,8 @@ class Command {
 	}
 }
 
+const jsonCommand = {"type": "divide", "num1": 100, "num2": 10};
+
 console.log(calculator.calc(new Command('divide', 10, 2)))
 console.log(calculator.calc(new Command('subtract', 10, 2)))
 
